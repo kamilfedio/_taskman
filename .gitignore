@@ -7,8 +7,9 @@
 .atom/
 .buildlog/
 .history
-.svn/
+.svn/jako 
 migrate_working_dir/
+lib/services/.env
 
 # IntelliJ related
 *.iml
