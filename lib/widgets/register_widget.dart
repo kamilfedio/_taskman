@@ -26,6 +26,12 @@ class _RegisterWidgetState extends State<RegisterWidget> {
     return emailRegex.hasMatch(text);
   }
 
+  bool isValidPass(String text) {
+    final hasloPattern = RegExp(r'^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{7,}$');
+
+    return hasloPattern.hasMatch(text);
+  }
+
   void signUp() async {
     showDialog(
         context: context,
@@ -144,6 +150,9 @@ class _RegisterWidgetState extends State<RegisterWidget> {
           validator: (value) {
             if ((value == null || value.isEmpty)) {
               return 'Podaj hasło';
+            }
+            if (!isValidPass(value)) {
+              return 'min. 6 znaków, duże małe litery, cyfry';
             }
             return null;
           },
