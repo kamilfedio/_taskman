@@ -27,7 +27,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
   }
 
   bool isValidPass(String text) {
-    final hasloPattern = RegExp(r'^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{7,}$');
+    final hasloPattern = RegExp(r'^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{6,}$');
 
     return hasloPattern.hasMatch(text);
   }
