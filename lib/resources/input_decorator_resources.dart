@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'colors_resources.dart';
+
 class InputDecoratorResources {
   final OutlineInputBorder enabledBorderStyle = OutlineInputBorder(
     borderRadius: BorderRadius.circular(20),
@@ -17,15 +19,15 @@ class InputDecoratorResources {
 
   final errorBorderStyle = OutlineInputBorder(
     borderRadius: BorderRadius.circular(20),
-    borderSide: const BorderSide(
-      color: Color.fromRGBO(229, 115, 115, 1),
+    borderSide: BorderSide(
+      color: ColorsResources().orangeLightColor,
     ),
   );
 
   final OutlineInputBorder focusedErrorBorderStyle = OutlineInputBorder(
     borderRadius: BorderRadius.circular(20),
-    borderSide: const BorderSide(
-      color: Color.fromRGBO(229, 115, 115, 1),
+    borderSide: BorderSide(
+      color: ColorsResources().orangeLightColor,
     ),
   );
 }

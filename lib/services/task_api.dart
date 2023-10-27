@@ -104,7 +104,7 @@ class TaskService {
         }
       }
 
-      return tasks;
+      return tasks.reversed.toList();
     } else {
       return tasks;
     }
